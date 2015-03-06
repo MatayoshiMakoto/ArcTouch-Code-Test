@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A59EAA2D1AAA756000460561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA2C1AAA756000460561 /* main.m */; };
+		A59EAA301AAA756000460561 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA2F1AAA756000460561 /* AppDelegate.m */; };
+		A59EAA331AAA756000460561 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA321AAA756000460561 /* ViewController.m */; };
+		A59EAA361AAA756000460561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA341AAA756000460561 /* Main.storyboard */; };
+		A59EAA381AAA756000460561 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA371AAA756000460561 /* Images.xcassets */; };
+		A59EAA3B1AAA756000460561 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA391AAA756000460561 /* LaunchScreen.xib */; };
+		A59EAA471AAA756000460561 /* FloripaTransTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA461AAA756000460561 /* FloripaTransTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A59EAA411AAA756000460561 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59EAA1F1AAA756000460561 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A59EAA261AAA756000460561;
+			remoteInfo = FloripaTrans;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A59EAA271AAA756000460561 /* FloripaTrans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloripaTrans.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59EAA2B1AAA756000460561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A59EAA2C1AAA756000460561 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A59EAA2E1AAA756000460561 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A59EAA2F1AAA756000460561 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A59EAA311AAA756000460561 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A59EAA321AAA756000460561 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A59EAA351AAA756000460561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A59EAA371AAA756000460561 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A59EAA3A1AAA756000460561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A59EAA401AAA756000460561 /* FloripaTransTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloripaTransTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59EAA451AAA756000460561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A59EAA461AAA756000460561 /* FloripaTransTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloripaTransTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A59EAA241AAA756000460561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A59EAA3D1AAA756000460561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A59EAA1E1AAA756000460561 = {
+			isa = PBXGroup;
+			children = (
+				A59EAA291AAA756000460561 /* FloripaTrans */,
+				A59EAA431AAA756000460561 /* FloripaTransTests */,
+				A59EAA281AAA756000460561 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A59EAA281AAA756000460561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA271AAA756000460561 /* FloripaTrans.app */,
+				A59EAA401AAA756000460561 /* FloripaTransTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A59EAA291AAA756000460561 /* FloripaTrans */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA2E1AAA756000460561 /* AppDelegate.h */,
+				A59EAA2F1AAA756000460561 /* AppDelegate.m */,
+				A59EAA311AAA756000460561 /* ViewController.h */,
+				A59EAA321AAA756000460561 /* ViewController.m */,
+				A59EAA341AAA756000460561 /* Main.storyboard */,
+				A59EAA371AAA756000460561 /* Images.xcassets */,
+				A59EAA391AAA756000460561 /* LaunchScreen.xib */,
+				A59EAA2A1AAA756000460561 /* Supporting Files */,
+			);
+			path = FloripaTrans;
+			sourceTree = "<group>";
+		};
+		A59EAA2A1AAA756000460561 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA2B1AAA756000460561 /* Info.plist */,
+				A59EAA2C1AAA756000460561 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A59EAA431AAA756000460561 /* FloripaTransTests */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA461AAA756000460561 /* FloripaTransTests.m */,
+				A59EAA441AAA756000460561 /* Supporting Files */,
+			);
+			path = FloripaTransTests;
+			sourceTree = "<group>";
+		};
+		A59EAA441AAA756000460561 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA451AAA756000460561 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A59EAA261AAA756000460561 /* FloripaTrans */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A59EAA4A1AAA756000460561 /* Build configuration list for PBXNativeTarget "FloripaTrans" */;
+			buildPhases = (
+				A59EAA231AAA756000460561 /* Sources */,
+				A59EAA241AAA756000460561 /* Frameworks */,
+				A59EAA251AAA756000460561 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloripaTrans;
+			productName = FloripaTrans;
+			productReference = A59EAA271AAA756000460561 /* FloripaTrans.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A59EAA3F1AAA756000460561 /* FloripaTransTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A59EAA4D1AAA756000460561 /* Build configuration list for PBXNativeTarget "FloripaTransTests" */;
+			buildPhases = (
+				A59EAA3C1AAA756000460561 /* Sources */,
+				A59EAA3D1AAA756000460561 /* Frameworks */,
+				A59EAA3E1AAA756000460561 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A59EAA421AAA756000460561 /* PBXTargetDependency */,
+			);
+			name = FloripaTransTests;
+			productName = FloripaTransTests;
+			productReference = A59EAA401AAA756000460561 /* FloripaTransTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A59EAA1F1AAA756000460561 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Vitor Makoto";
+				TargetAttributes = {
+					A59EAA261AAA756000460561 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A59EAA3F1AAA756000460561 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = A59EAA261AAA756000460561;
+					};
+				};
+			};
+			buildConfigurationList = A59EAA221AAA756000460561 /* Build configuration list for PBXProject "FloripaTrans" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A59EAA1E1AAA756000460561;
+			productRefGroup = A59EAA281AAA756000460561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A59EAA261AAA756000460561 /* FloripaTrans */,
+				A59EAA3F1AAA756000460561 /* FloripaTransTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A59EAA251AAA756000460561 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59EAA361AAA756000460561 /* Main.storyboard in Resources */,
+				A59EAA3B1AAA756000460561 /* LaunchScreen.xib in Resources */,
+				A59EAA381AAA756000460561 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A59EAA3E1AAA756000460561 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A59EAA231AAA756000460561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59EAA331AAA756000460561 /* ViewController.m in Sources */,
+				A59EAA301AAA756000460561 /* AppDelegate.m in Sources */,
+				A59EAA2D1AAA756000460561 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A59EAA3C1AAA756000460561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59EAA471AAA756000460561 /* FloripaTransTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A59EAA421AAA756000460561 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A59EAA261AAA756000460561 /* FloripaTrans */;
+			targetProxy = A59EAA411AAA756000460561 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A59EAA341AAA756000460561 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A59EAA351AAA756000460561 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A59EAA391AAA756000460561 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A59EAA3A1AAA756000460561 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A59EAA481AAA756000460561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A59EAA491AAA756000460561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A59EAA4B1AAA756000460561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FloripaTrans/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A59EAA4C1AAA756000460561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FloripaTrans/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A59EAA4E1AAA756000460561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FloripaTransTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloripaTrans.app/FloripaTrans";
+			};
+			name = Debug;
+		};
+		A59EAA4F1AAA756000460561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FloripaTransTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloripaTrans.app/FloripaTrans";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A59EAA221AAA756000460561 /* Build configuration list for PBXProject "FloripaTrans" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A59EAA481AAA756000460561 /* Debug */,
+				A59EAA491AAA756000460561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A59EAA4A1AAA756000460561 /* Build configuration list for PBXNativeTarget "FloripaTrans" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A59EAA4B1AAA756000460561 /* Debug */,
+				A59EAA4C1AAA756000460561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A59EAA4D1AAA756000460561 /* Build configuration list for PBXNativeTarget "FloripaTransTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A59EAA4E1AAA756000460561 /* Debug */,
+				A59EAA4F1AAA756000460561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A59EAA1F1AAA756000460561 /* Project object */;
+}
