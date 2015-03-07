@@ -44,7 +44,7 @@
  *  @return returns an instance of the FTDeparture already allocated
  */
 
-- (instancetype)departureWithCalendar:(NSString *)calendar
++ (instancetype)departureWithCalendar:(NSString *)calendar
                                 andId:(NSString *)identifier
                               andTime:(NSString *)time {
     

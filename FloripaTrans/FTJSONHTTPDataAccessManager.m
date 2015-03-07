@@ -9,6 +9,8 @@
 #import "FTJSONHTTPDataAccessManager.h"
 #import <AFNetworking.h>
 #import "FTRoute.h"
+#import "FTStop.h"
+#import "FTDeparture.h"
 
 @interface FTJSONHTTPDataAccessManager()
 @property (strong, nonatomic) NSMutableDictionary *basePostBody;
@@ -114,11 +116,64 @@
 }
 
 - (void)findStopsForRouteId:(int)routeId {
+    NSMutableDictionary * postBody = self.basePostBody.mutableCopy;
     
+    [postBody[@"params"] setValue:[NSNumber numberWithInt:routeId] forKey:@"routeId"];
+    
+    [self POST:@"findStopsByRouteId/run" parameters:postBody success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSMutableArray *stops = [[NSMutableArray alloc] init];
+        
+        for(NSDictionary *s in responseObject[@"rows"]) {
+            FTStop *stop = [FTStop stopWithId:s[@"id"]
+                                      andName:s[@"name"]
+                                   andRouteId:s[@"\"route_id\""]
+                                  andSequence:s[@"sequence"]];
+            
+            [stops addObject:stop];
+        }
+        
+        if(self.delegate && [self.delegate respondsToSelector:@selector(didFindStops:forRoutesId:)]) {
+            [self.delegate didFindStops:stops forRoutesId:routeId];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        if(self.delegate && [self.delegate respondsToSelector:@selector(didFailToFindStopsForRoutesId:)]) {
+            [self.delegate didFailToFindStopsForRoutesId:error];
+        }
+        
+    }];
 }
 
 - (void) findDeparturesForRouteId:(int)routeId {
+    NSMutableDictionary * postBody = self.basePostBody.mutableCopy;
     
+    [postBody[@"params"] setValue:[NSNumber numberWithInt:routeId] forKey:@"routeId"];
+    
+    [self POST:@"findDeparturesByRouteId/run" parameters:postBody success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSMutableArray *departures = [[NSMutableArray alloc] init];
+        
+        for(NSDictionary *d in responseObject[@"rows"]) {
+            FTDeparture *departure = [FTDeparture departureWithCalendar:d[@"calendar"]
+                                                                   andId:d[@"id"]
+                                                                 andTime:d[@"time"]];
+            
+            [departures addObject:departure];
+        }
+        
+        if(self.delegate && [self.delegate respondsToSelector:@selector(didFindDepartures:ByRouteId:)]) {
+            [self.delegate didFindDepartures:departures ByRouteId:routeId];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        if(self.delegate && [self.delegate respondsToSelector:@selector(didFailToFindDeparturesForRouteId:)]) {
+            [self.delegate didFailToFindDeparturesForRouteId:error];
+        }
+        
+    }];
 }
 
 @end

@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, Calendar) {
                            andId:(NSString *)identifier
                          andTime:(NSString *)time;
 
-- (instancetype)departureWithCalendar:(NSString *)calendar
++ (instancetype)departureWithCalendar:(NSString *)calendar
                                 andId:(NSString *)identifier
                               andTime:(NSString *)time;
 @end
