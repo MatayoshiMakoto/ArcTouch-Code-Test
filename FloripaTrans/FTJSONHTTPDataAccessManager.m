@@ -8,6 +8,7 @@
 
 #import "FTJSONHTTPDataAccessManager.h"
 #import <AFNetworking.h>
+#import "FTRoute.h"
 
 @interface FTJSONHTTPDataAccessManager()
 @property (strong, nonatomic) NSMutableDictionary *basePostBody;
@@ -88,8 +89,19 @@
     
     [self POST:@"findRoutesByStopName/run" parameters:postBody success:^(NSURLSessionDataTask *task, id responseObject) {
         
+        NSMutableArray *routes = [[NSMutableArray alloc] init];
+        for(NSDictionary *r in responseObject[@"rows"]) {
+            FTRoute *route = [FTRoute routeWithAgencyId:r[@"agencyId"]
+                                                    andId:r[@"id"]
+                                      andLastModifiedDate:r[@"lastModifiedDate"]
+                                              andLongName:r[@"longName"]
+                                              andShorName:r[@"shortName"]];
+            
+            [routes addObject:route];
+        }
+        
         if(self.delegate && [self.delegate respondsToSelector:@selector(didFindRoutes:forStopName:)]) {
-            [self.delegate didFindRoutes:responseObject[@"rows"] forStopName:stopName];
+            [self.delegate didFindRoutes:routes forStopName:stopName];
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

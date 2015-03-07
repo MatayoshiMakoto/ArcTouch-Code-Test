@@ -38,4 +38,13 @@
     }
 }
 
+- (void)alertFailFetchingMessage:(NSString *)message{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Fetching data error"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
 @end

@@ -8,7 +8,9 @@
 
 #import "FTRoutesListViewController.h"
 #import "FTDataAccessProtocols.h"
+#import "FTJSONHTTPDataAccessManager.h"
 #import "UIView+FTViewLayout.h"
+#import "FTRoute.h"
 
 @interface FTRoutesListViewController() <UITableViewDelegate, UITableViewDataSource, FTDataAccessDelegate>
 
@@ -16,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton    *searchButton;
 @property (weak, nonatomic) IBOutlet UITableView *routesTableView;
 
-@property (strong, nonatomic) NSArray     *routes;
+@property (strong, nonatomic) NSArray *routes;
 
 @property (strong, nonatomic) id <FTDataAccessManager> dataAccessManager;
 
@@ -26,12 +28,43 @@
 
 - (void)viewDidLoad {
     [self.searchButton roundViewCornerWithRadius:10];
+    
+    self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
+    self.dataAccessManager.delegate = self;
+    [self.dataAccessManager findRoutesForStopName:@"Deputado Antônio Edu Vieira"];
 }
 
 - (IBAction)searchTouchUp:(id)sender {
+    NSString * searchText = self.searchTextField.text;
+    if(searchText && searchText.length > 0)
+    {
+        self.dataAccessManager.delegate = self;
+        [self.dataAccessManager findRoutesForStopName:searchText];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Content"
+                                                            message:@"Type a stop name to search"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
     
     [self dismissKeyboard];
 }
+
+#pragma mark - DataAccessDelegate delegate methods
+
+- (void)didFindRoutes:(NSArray *)routes forStopName:(NSString *)stopName {
+    
+    self.routes = routes;
+    NSLog(@"%@", self.routes);
+    [self.routesTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void)didFailToFindRoutesByStopName:(NSError *)error {
+    [self alertFailFetchingMessage:[error localizedDescription]];
+}
+
 
 #pragma mark - Table view data source
 
@@ -47,8 +80,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *simpleTableIdentifier = @"routesTableCell";
     
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    FTRoute *currentRoute = [self.routes objectAtIndex:indexPath.row];
+    cell.textLabel.text = currentRoute.longName;
+    return cell;
 }
 
 

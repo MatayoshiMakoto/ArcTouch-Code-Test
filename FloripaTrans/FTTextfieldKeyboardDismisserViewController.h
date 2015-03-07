@@ -8,5 +8,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FTTextfieldKeyboardDismisserViewController : UIViewController
-- (void) dismissKeyboard;
+- (void)dismissKeyboard;
+- (void)alertFailFetchingMessage:(NSString *)message;
 @end

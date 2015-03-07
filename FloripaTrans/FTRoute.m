@@ -74,6 +74,6 @@
  *  @return string with all properties current values.
  */
 - (NSString *)description {
-    return [NSString stringWithFormat:@"{\nagencyId = %d\nid = %d\nlastModifiedDate = %@\nlongName = %@\nshortName = %d\n}", self.agencyId, self.identifier, self.lastModifiedDate, self.longName, self.shortName];
+    return [NSString stringWithFormat:@"\r{\ragencyId = %d\rid = %d\rlastModifiedDate = %@\rlongName = %@\rshortName = %d\r}", self.agencyId, self.identifier, self.lastModifiedDate, self.longName, self.shortName];
 }
 @end
