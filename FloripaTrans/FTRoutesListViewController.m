@@ -8,6 +8,7 @@
 
 #import "FTRoutesListViewController.h"
 #import "FTDataAccessProtocols.h"
+#import "UIView+FTViewLayout.h"
 
 @interface FTRoutesListViewController() <UITableViewDelegate, UITableViewDataSource, FTDataAccessDelegate>
 
@@ -23,6 +24,9 @@
 
 @implementation FTRoutesListViewController
 
+- (void)viewDidLoad {
+    [self.searchButton roundViewCornerWithRadius:10];
+}
 
 - (IBAction)searchTouchUp:(id)sender {
     
