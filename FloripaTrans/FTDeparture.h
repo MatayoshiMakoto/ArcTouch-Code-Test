@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, Calendar) {
 @interface FTDeparture : NSObject
 @property (assign, nonatomic) Calendar calendar;
 @property (assign, nonatomic) int      identifier;
-@property (assign, nonatomic) NSString *time;
+@property (copy, nonatomic) NSString *time;
 
 - (instancetype)initWithCalendar:(NSString *)calendar
                            andId:(NSString *)identifier

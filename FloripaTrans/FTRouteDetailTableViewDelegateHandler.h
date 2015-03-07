@@ -8,7 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+@class UITableView;
 
-@interface FTRouteDetailTableViewDelegateHandler : NSObject <UITableViewDelegate, UITableViewDataSource>
+@protocol FTRouteDetailTableViewDelegateHandlerDelegate <NSObject>
 
+@required
+- (void)refreshTableViewSection:(NSInteger) section;
+- (void)reloadTableView;
+@end
+
+@interface FTRouteDetailTableViewDelegateHandler : NSObject <UITableViewDataSource, UITableViewDelegate>
+
+- (void)updateStreets:(NSArray *)streets;
+- (void)updateDepartures:(NSArray *)departures;
+
+@property (nonatomic, weak) id <FTRouteDetailTableViewDelegateHandlerDelegate> delegate;
 @end

@@ -81,6 +81,6 @@
  *  @return string with all properties current values.
  */
 - (NSString *)description {
-    return [NSString stringWithFormat:@"\r{\rcalendar = %ld\rnid = %d\rtime = %@\r}", self.calendar, self.identifier, self.time];
+    return [NSString stringWithFormat:@"\r{\rcalendar = %ld\rid = %d\rtime = %@\r}", self.calendar, self.identifier, self.time];
 }
 @end

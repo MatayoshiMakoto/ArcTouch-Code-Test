@@ -13,7 +13,7 @@
 #import "UIView+FTViewLayout.h"
 #import "FTRouteDetailTableViewDelegateHandler.h"
 
-@interface FTRouteDetailViewController() <FTDataAccessDelegate>
+@interface FTRouteDetailViewController() <FTDataAccessDelegate, FTRouteDetailTableViewDelegateHandlerDelegate>
 @property (weak, nonatomic) IBOutlet UIView      *titleBackground;
 @property (weak, nonatomic) IBOutlet UILabel     *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
@@ -42,6 +42,8 @@
     self.tableViewDelegateHandler = [[FTRouteDetailTableViewDelegateHandler alloc] init];
     self.contentTableView.delegate = self.tableViewDelegateHandler;
     self.contentTableView.dataSource = self.tableViewDelegateHandler;
+    self.tableViewDelegateHandler.delegate = self;
+    
     
     // Set up the data access manager
     self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
@@ -56,7 +58,8 @@
 
 #pragma mark - DataAccessDelegate delegate methods
 - (void)didFindStops:(NSArray *)stops forRoutesId:(int)routeId {
-    NSLog(@"%@", stops);
+    [self.tableViewDelegateHandler updateStreets:stops];
+    
     self.dataAccessManager.delegate = self;
     [self.dataAccessManager findDeparturesForRouteId:self.route.identifier];
 }
@@ -66,7 +69,7 @@
 }
 
 - (void)didFindDepartures:(NSArray *)departures ByRouteId:(int)routeId {
-    NSLog(@"%@", departures);
+    [self.tableViewDelegateHandler updateDepartures:departures];
     
 }
 
@@ -74,8 +77,15 @@
     [self alertFailFetchingMessage:[error localizedDescription]];
 }
 
+#pragma mark - FTRouteDetailTableViewDelegateHandlerDelegate delgate methods
 
+- (void)refreshTableViewSection:(NSInteger)section {
+    [self.contentTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationFade];
+}
 
+- (void)reloadTableView {
+    [self.contentTableView reloadData];
+}
 
 
 @end
