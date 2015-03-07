@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Vitor Makoto. All rights reserved.
 //
 
-#import "FTTextfieldKeyboardDismisserViewController.h"
+#import "FTBaseViewController.h"
 @class FTRoute;
 
-@interface FTRouteDetailViewController : FTTextfieldKeyboardDismisserViewController
+@interface FTRouteDetailViewController : FTBaseViewController
 @property (strong, nonatomic) FTRoute *route;
 @end

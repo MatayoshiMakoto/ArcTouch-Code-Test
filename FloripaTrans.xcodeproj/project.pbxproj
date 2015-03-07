@@ -16,7 +16,7 @@
 		A59EAA471AAA756000460561 /* FloripaTransTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA461AAA756000460561 /* FloripaTransTests.m */; };
 		A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */; };
 		A59EAA5B1AAA817E00460561 /* FTRoutesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5A1AAA817E00460561 /* FTRoutesListViewController.m */; };
-		A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */; };
+		A59EAA5E1AAA833A00460561 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5D1AAA833A00460561 /* FTBaseViewController.m */; };
 		A59EAA611AAA891500460561 /* UIView+FTViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */; };
 		A59EAA641AAA8C2600460561 /* FTRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA631AAA8C2600460561 /* FTRoute.m */; };
 		A59EAA671AAA960800460561 /* floripa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA661AAA960800460561 /* floripa.jpg */; };
@@ -69,8 +69,8 @@
 		A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTJSONHTTPDataAccessManager.m; sourceTree = "<group>"; };
 		A59EAA591AAA817E00460561 /* FTRoutesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRoutesListViewController.h; sourceTree = "<group>"; };
 		A59EAA5A1AAA817E00460561 /* FTRoutesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRoutesListViewController.m; sourceTree = "<group>"; };
-		A59EAA5C1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTextfieldKeyboardDismisserViewController.h; sourceTree = "<group>"; };
-		A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTextfieldKeyboardDismisserViewController.m; sourceTree = "<group>"; };
+		A59EAA5C1AAA833A00460561 /* FTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
+		A59EAA5D1AAA833A00460561 /* FTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBaseViewController.m; sourceTree = "<group>"; };
 		A59EAA5F1AAA891500460561 /* UIView+FTViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FTViewLayout.h"; sourceTree = "<group>"; };
 		A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FTViewLayout.m"; sourceTree = "<group>"; };
 		A59EAA621AAA8C2600460561 /* FTRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRoute.h; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 		A59EAA501AAA7A0900460561 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A59EAA5C1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.h */,
-				A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */,
+				A59EAA5C1AAA833A00460561 /* FTBaseViewController.h */,
+				A59EAA5D1AAA833A00460561 /* FTBaseViewController.m */,
 				A59EAA5F1AAA891500460561 /* UIView+FTViewLayout.h */,
 				A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */,
 			);
@@ -460,7 +460,7 @@
 				A59EAA611AAA891500460561 /* UIView+FTViewLayout.m in Sources */,
 				A59EAA641AAA8C2600460561 /* FTRoute.m in Sources */,
 				A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */,
-				A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */,
+				A59EAA5E1AAA833A00460561 /* FTBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

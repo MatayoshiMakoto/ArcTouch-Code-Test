@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Vitor Makoto. All rights reserved.
 //
 
-#import "FTTextfieldKeyboardDismisserViewController.h"
+#import "FTBaseViewController.h"
 @protocol FTFindRoutesGoogleMapsViewControllerDelegate <NSObject>
 @required
 - (void)streetNameSelected:(NSString *)street;
 @end
 
-@interface FTFindRoutesGoogleMapsViewController : FTTextfieldKeyboardDismisserViewController
+@interface FTFindRoutesGoogleMapsViewController : FTBaseViewController
 
 @property (nonatomic, weak) id <FTFindRoutesGoogleMapsViewControllerDelegate> delegate;
 @end

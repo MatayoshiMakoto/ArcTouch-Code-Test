@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Vitor Makoto. All rights reserved.
 //
 
-#import "FTTextfieldKeyboardDismisserViewController.h"
+#import "FTBaseViewController.h"
 
-@interface FTRoutesListViewController : FTTextfieldKeyboardDismisserViewController
+@interface FTRoutesListViewController : FTBaseViewController
 
 @end

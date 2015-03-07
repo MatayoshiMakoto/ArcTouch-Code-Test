@@ -104,7 +104,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if(section == 0)
+    if(section == 0 && [self.streets count] > 0)
         return [self.streets count] + 1;
     
     Calendar sectionType = [self sectionTypeForSection:section];
