@@ -42,7 +42,6 @@
  */
 - (void)updateStreets:(NSArray *)streets {
     self.streets = streets;
-    NSLog(@"%@", self.streets);
     if(self.delegate && [self.delegate respondsToSelector:@selector(refreshTableViewSection:)]) {
         [self.delegate refreshTableViewSection:0];
     }
@@ -51,10 +50,9 @@
 /**
  *  Method that updates the departures arrays data source and refresh the tableview
  *
- *  @param departures <#departures description#>
+ *  @param departures departures
  */
 - (void)updateDepartures:(NSArray *)departures {
-    NSLog(@"%@", departures);
     
     self.weekdayDepartures  = [NSMutableArray array];
     self.saturdayDepartures = [NSMutableArray array];
@@ -107,7 +105,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section == 0)
-        return [self.streets count];
+        return [self.streets count] + 1;
     
     Calendar sectionType = [self sectionTypeForSection:section];
     
