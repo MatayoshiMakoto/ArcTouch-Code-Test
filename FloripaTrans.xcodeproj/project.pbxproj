@@ -18,6 +18,7 @@
 		A59EAA5B1AAA817E00460561 /* FTRoutesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5A1AAA817E00460561 /* FTRoutesListViewController.m */; };
 		A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */; };
 		A59EAA611AAA891500460561 /* UIView+FTViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */; };
+		A59EAA641AAA8C2600460561 /* FTRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA631AAA8C2600460561 /* FTRoute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTextfieldKeyboardDismisserViewController.m; sourceTree = "<group>"; };
 		A59EAA5F1AAA891500460561 /* UIView+FTViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FTViewLayout.h"; sourceTree = "<group>"; };
 		A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FTViewLayout.m"; sourceTree = "<group>"; };
+		A59EAA621AAA8C2600460561 /* FTRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRoute.h; sourceTree = "<group>"; };
+		A59EAA631AAA8C2600460561 /* FTRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRoute.m; sourceTree = "<group>"; };
 		D4ADF84DAC1C0CDC62985E90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5782A5EC3984BF5E1B143B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +190,8 @@
 		A59EAA541AAA7A4900460561 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A59EAA621AAA8C2600460561 /* FTRoute.h */,
+				A59EAA631AAA8C2600460561 /* FTRoute.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				A59EAA301AAA756000460561 /* AppDelegate.m in Sources */,
 				A59EAA2D1AAA756000460561 /* main.m in Sources */,
 				A59EAA611AAA891500460561 /* UIView+FTViewLayout.m in Sources */,
+				A59EAA641AAA8C2600460561 /* FTRoute.m in Sources */,
 				A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */,
 				A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */,
 			);
