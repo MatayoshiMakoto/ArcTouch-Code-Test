@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *routesTableView;
 
 @property (strong, nonatomic) NSArray     *routes;
+
+@property (strong, nonatomic) id <FTDataAccessManager> dataAccessManager;
+
 @end
 
 @implementation FTRoutesListViewController
