@@ -42,6 +42,7 @@
 		A59EAA401AAA756000460561 /* FloripaTransTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloripaTransTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59EAA451AAA756000460561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59EAA461AAA756000460561 /* FloripaTransTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloripaTransTests.m; sourceTree = "<group>"; };
+		A59EAA551AAA7ACA00460561 /* FTDataAccessProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTDataAccessProtocols.h; sourceTree = "<group>"; };
 		D4ADF84DAC1C0CDC62985E90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5782A5EC3984BF5E1B143B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,6 +150,7 @@
 		A59EAA511AAA7A1F00460561 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				A59EAA551AAA7ACA00460561 /* FTDataAccessProtocols.h */,
 			);
 			name = DataAccess;
 			sourceTree = "<group>";
