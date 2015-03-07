@@ -43,7 +43,7 @@
 }
 
 /**
- *  Class Method that allocates and initializes a FTRoute object setting it's agencyId, id, last modified date, long name and short name properties.
+ *  Class method that allocates and initializes a FTRoute object setting it's agencyId, id, last modified date, long name and short name properties.
  *
  *  @param agencyId         agencyId
  *  @param identifier       unique Id
@@ -51,7 +51,7 @@
  *  @param longName         it's string name
  *  @param shortName        it's short name
  *
- *  @return returns an instance of the FTRoute
+ *  @return returns an instance of the FTRoute already allocated
  */
 + (instancetype)routeWithAgencyId:(NSString *)agencyId
                             andId:(NSString *)identifier
@@ -69,7 +69,7 @@
 }
 
 /**
- *  Method that returns a string with all of it's properties.
+ *  Method that returns a string with all of a FTRoute's instance properties.
  *
  *  @return string with all properties current values.
  */

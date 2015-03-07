@@ -10,6 +10,15 @@
 
 @implementation FTDeparture
 
+/**
+ *  Method that initializes a FTDeparture object setting it's calendar, id, and time properties.
+ *
+ *  @param calendar   calendar in which the departure happens
+ *  @param identifier unique Id
+ *  @param time       time which it departs
+ *
+ *  @return returns an instance of the FTDeparture
+ */
 - (instancetype)initWithCalendar:(NSString *)calendar
                            andId:(NSString *)identifier
                          andTime:(NSString *)time {
@@ -25,6 +34,16 @@
     return self;
 }
 
+/**
+ *  Class method that allocates and initializes a FTDeparture object setting it's calendar, id, and time properties.
+ *
+ *  @param calendar   calendar in which the departure happens
+ *  @param identifier unique Id
+ *  @param time       time which it departs
+ *
+ *  @return returns an instance of the FTDeparture already allocated
+ */
+
 - (instancetype)departureWithCalendar:(NSString *)calendar
                                 andId:(NSString *)identifier
                               andTime:(NSString *)time {
@@ -36,6 +55,13 @@
     return newDeparture;
 }
 
+/**
+ *  Method that converts a string to a Calendar enum
+ *
+ *  @param calendarString string to be converted
+ *
+ *  @return returns a Calendar enum
+ */
 - (Calendar) stringToCalendar:(NSString *)calendarString {
     
     if([calendarString isEqualToString:@"WEEKDAY"]) {
@@ -47,5 +73,14 @@
     }
     
     return INVALID;
+}
+
+/**
+ *  Method that returns a string with all of a FTDeparture's instance properties.
+ *
+ *  @return string with all properties current values.
+ */
+- (NSString *)description {
+    return [NSString stringWithFormat:@"\r{\rcalendar = %ld\rnid = %d\time = %@\r}", self.calendar, self.identifier, self.time];
 }
 @end

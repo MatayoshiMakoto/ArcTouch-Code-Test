@@ -10,6 +10,16 @@
 
 @implementation FTStop
 
+/**
+ *  Method that initializes a FTStop object setting it's id, name, routeId and sequence properties.
+ *
+ *  @param identifier unique Id
+ *  @param name       name of the stop
+ *  @param routeId    route used to search for it
+ *  @param sequence   it's sequence in the chosen route
+ *
+ *  @return returns an instance of the FTStop
+ */
 - (instancetype)initWithId:(NSString *)identifier
                    andName:(NSString *)name
                 andRouteId:(NSString *)routeId
@@ -27,6 +37,16 @@
     return self;
 }
 
+/**
+ *  Class method that allocates and initializes a FTStop object setting it's id, name, routeId and sequence properties.
+ *
+ *  @param identifier unique Id
+ *  @param name       name of the stop
+ *  @param routeId    route used to search for it
+ *  @param sequence   it's sequence in the chosen route
+ *
+ *  @return returns an instance of the FTStop already allocated
+ */
 + (instancetype)stopWithId:(NSString *)identifier
                    andName:(NSString *)name
                 andRouteId:(NSString *)routeId
@@ -38,5 +58,14 @@
                                      andSequence:sequence];
     
     return newStop;
+}
+
+/**
+ *  Method that returns a string with all of a FTStop's instance properties.
+ *
+ *  @return string with all properties current values.
+ */
+- (NSString *)description {
+    return [NSString stringWithFormat:@"\r{\rid = %d\rname = %@\routeId = %d\rsequence = %d\r}", self.identifier, self.name, self.routeId, self.sequence];
 }
 @end
