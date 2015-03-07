@@ -19,6 +19,8 @@
 		A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */; };
 		A59EAA611AAA891500460561 /* UIView+FTViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */; };
 		A59EAA641AAA8C2600460561 /* FTRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA631AAA8C2600460561 /* FTRoute.m */; };
+		A59EAA671AAA960800460561 /* floripa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA661AAA960800460561 /* floripa.jpg */; };
+		A59EAA6A1AAA976600460561 /* FTRouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA691AAA976600460561 /* FTRouteDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		A59EAA601AAA891500460561 /* UIView+FTViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FTViewLayout.m"; sourceTree = "<group>"; };
 		A59EAA621AAA8C2600460561 /* FTRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRoute.h; sourceTree = "<group>"; };
 		A59EAA631AAA8C2600460561 /* FTRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRoute.m; sourceTree = "<group>"; };
+		A59EAA661AAA960800460561 /* floripa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floripa.jpg; sourceTree = "<group>"; };
+		A59EAA681AAA976600460561 /* FTRouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouteDetailViewController.h; sourceTree = "<group>"; };
+		A59EAA691AAA976600460561 /* FTRouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouteDetailViewController.m; sourceTree = "<group>"; };
 		D4ADF84DAC1C0CDC62985E90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5782A5EC3984BF5E1B143B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +114,7 @@
 		A59EAA291AAA756000460561 /* FloripaTrans */ = {
 			isa = PBXGroup;
 			children = (
+				A59EAA651AAA95EC00460561 /* Images */,
 				A59EAA541AAA7A4900460561 /* Model */,
 				A59EAA531AAA7A3D00460561 /* RouteDetail */,
 				A59EAA521AAA7A2C00460561 /* RoutesList */,
@@ -183,6 +189,8 @@
 		A59EAA531AAA7A3D00460561 /* RouteDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A59EAA681AAA976600460561 /* FTRouteDetailViewController.h */,
+				A59EAA691AAA976600460561 /* FTRouteDetailViewController.m */,
 			);
 			name = RouteDetail;
 			sourceTree = "<group>";
@@ -194,6 +202,14 @@
 				A59EAA631AAA8C2600460561 /* FTRoute.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A59EAA651AAA95EC00460561 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA661AAA960800460561 /* floripa.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		C366CF1B97705B2D728A0708 /* Pods */ = {
@@ -290,6 +306,7 @@
 				A59EAA361AAA756000460561 /* Main.storyboard in Resources */,
 				A59EAA3B1AAA756000460561 /* LaunchScreen.xib in Resources */,
 				A59EAA381AAA756000460561 /* Images.xcassets in Resources */,
+				A59EAA671AAA960800460561 /* floripa.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +360,7 @@
 				A59EAA5B1AAA817E00460561 /* FTRoutesListViewController.m in Sources */,
 				A59EAA301AAA756000460561 /* AppDelegate.m in Sources */,
 				A59EAA2D1AAA756000460561 /* main.m in Sources */,
+				A59EAA6A1AAA976600460561 /* FTRouteDetailViewController.m in Sources */,
 				A59EAA611AAA891500460561 /* UIView+FTViewLayout.m in Sources */,
 				A59EAA641AAA8C2600460561 /* FTRoute.m in Sources */,
 				A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */,

@@ -68,11 +68,80 @@
                         <outlet property="routesTableView" destination="MwE-6t-5FZ" id="dk4-NQ-c7m"/>
                         <outlet property="searchButton" destination="5i6-w5-tfF" id="m6z-k1-gPj"/>
                         <outlet property="searchTextField" destination="jdQ-sE-TiJ" id="z4k-A7-MmJ"/>
+                        <segue destination="IN6-we-8Gp" kind="show" identifier="PushToRouteDetail" id="VSb-Gy-tcV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1092" y="319"/>
+        </scene>
+        <!--Route Detail View Controller-->
+        <scene sceneID="yrc-jr-Ypa">
+            <objects>
+                <viewController id="IN6-we-8Gp" customClass="FTRouteDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tuE-UA-0ML"/>
+                        <viewControllerLayoutGuide type="bottom" id="vck-Xx-A65"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uka-IC-8BR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floripa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-rK-hG5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-71-gTK">
+                                <rect key="frame" x="190" y="72" width="221" height="103"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="7uF-rV-9yO"/>
+                                    <constraint firstAttribute="height" constant="103" id="oBs-bd-rYw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dja-0L-gQh">
+                                <rect key="frame" x="189" y="72" width="221" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="mtR-d0-pPD"/>
+                                    <constraint firstAttribute="width" constant="221" id="rPe-8B-LEi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vpx-wV-Gbn">
+                                <rect key="frame" x="0.0" y="183" width="600" height="417"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IN6-we-8Gp" id="8lJ-6W-rhE"/>
+                                    <outlet property="delegate" destination="IN6-we-8Gp" id="5dn-yp-l0G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MFf-rK-hG5" firstAttribute="top" secondItem="Uka-IC-8BR" secondAttribute="topMargin" id="02L-lK-T3T"/>
+                            <constraint firstItem="vck-Xx-A65" firstAttribute="top" secondItem="MFf-rK-hG5" secondAttribute="bottom" id="0xy-Q0-Apf"/>
+                            <constraint firstItem="Vpx-wV-Gbn" firstAttribute="top" secondItem="dja-0L-gQh" secondAttribute="bottom" constant="8" id="3wN-Zh-7Th"/>
+                            <constraint firstItem="O6K-71-gTK" firstAttribute="top" secondItem="tuE-UA-0ML" secondAttribute="bottom" constant="8" id="GIm-eu-P4Q"/>
+                            <constraint firstItem="dja-0L-gQh" firstAttribute="top" secondItem="tuE-UA-0ML" secondAttribute="bottom" constant="8" id="Sf9-Bp-VoA"/>
+                            <constraint firstItem="MFf-rK-hG5" firstAttribute="leading" secondItem="Uka-IC-8BR" secondAttribute="leadingMargin" constant="-16" id="U8E-99-KpO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vpx-wV-Gbn" secondAttribute="trailing" constant="-16" id="WAr-UA-FOZ"/>
+                            <constraint firstAttribute="centerX" secondItem="O6K-71-gTK" secondAttribute="centerX" id="Y30-5c-aoE"/>
+                            <constraint firstAttribute="centerX" secondItem="dja-0L-gQh" secondAttribute="centerX" id="r6w-un-meK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MFf-rK-hG5" secondAttribute="trailing" constant="-16" id="siC-50-KeA"/>
+                            <constraint firstItem="vck-Xx-A65" firstAttribute="top" secondItem="Vpx-wV-Gbn" secondAttribute="bottom" id="ul0-Ub-W7P"/>
+                            <constraint firstItem="Vpx-wV-Gbn" firstAttribute="leading" secondItem="Uka-IC-8BR" secondAttribute="leadingMargin" constant="-16" id="xLj-Wp-SI9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTableView" destination="Vpx-wV-Gbn" id="bWS-N7-2C0"/>
+                        <outlet property="titleBackground" destination="O6K-71-gTK" id="jEG-eF-WiA"/>
+                        <outlet property="titleLabel" destination="dja-0L-gQh" id="4P1-l3-fWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGJ-Fg-k91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P2O-cO-k9v">
@@ -93,4 +162,7 @@
             <point key="canvasLocation" x="337" y="316"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="floripa.jpg" width="959" height="610"/>
+    </resources>
 </document>

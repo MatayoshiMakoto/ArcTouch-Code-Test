@@ -11,6 +11,7 @@
 #import "FTJSONHTTPDataAccessManager.h"
 #import "UIView+FTViewLayout.h"
 #import "FTRoute.h"
+#import "FTRouteDetailViewController.h"
 
 @interface FTRoutesListViewController() <UITableViewDelegate, UITableViewDataSource, FTDataAccessDelegate>
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *routesTableView;
 
 @property (strong, nonatomic) NSArray *routes;
+@property (strong, nonatomic) FTRoute *selectedRoute;
 
 @property (strong, nonatomic) id <FTDataAccessManager> dataAccessManager;
 
@@ -98,6 +100,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if(tableView == self.routesTableView)
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        self.selectedRoute = self.routes[indexPath.row];
+        [self performSegueWithIdentifier:@"PushToRouteDetail" sender:self];
+    }
+
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"PushToRouteDetail"]) {
+        FTRouteDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.route = self.selectedRoute;
+        
+        
+    }
 }
 @end
