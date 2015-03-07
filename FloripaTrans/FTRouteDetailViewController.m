@@ -11,13 +11,16 @@
 #import "FTJSONHTTPDataAccessManager.h"
 #import "FTRoute.h"
 #import "UIView+FTViewLayout.h"
+#import "FTRouteDetailTableViewDelegateHandler.h"
 
-@interface FTRouteDetailViewController() <FTDataAccessDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface FTRouteDetailViewController() <FTDataAccessDelegate>
 @property (weak, nonatomic) IBOutlet UIView      *titleBackground;
 @property (weak, nonatomic) IBOutlet UILabel     *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 
 @property (strong, nonatomic) id <FTDataAccessManager> dataAccessManager;
+
+@property (strong, nonatomic) FTRouteDetailTableViewDelegateHandler *tableViewDelegateHandler;
 @end
 
 @implementation FTRouteDetailViewController
@@ -25,16 +28,25 @@
     
     [super viewDidLoad];
     NSLog(@"%@", self.route);
-    self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
-    self.dataAccessManager.delegate = self;
-    [self.dataAccessManager findStopsForRouteId:self.route.identifier];
     
+    // Set up how the UI state of the UI elements
     [self.titleBackground roundViewCornerWithRadius:25];
     self.titleLabel.text = self.route.longName;
     
+    // Change the back button so it has the title Back
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = item;
+    
+    // Set the content table view data source to the table view delegate handler
+    self.tableViewDelegateHandler = [[FTRouteDetailTableViewDelegateHandler alloc] init];
+    self.contentTableView.delegate = self.tableViewDelegateHandler;
+    self.contentTableView.dataSource = self.tableViewDelegateHandler;
+    
+    // Set up the data access manager
+    self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
+    self.dataAccessManager.delegate = self;
+    [self.dataAccessManager findStopsForRouteId:self.route.identifier];
 
 }
 
@@ -42,112 +54,28 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
-    return 1;
+#pragma mark - DataAccessDelegate delegate methods
+- (void)didFindStops:(NSArray *)stops forRoutesId:(int)routeId {
+    NSLog(@"%@", stops);
+    self.dataAccessManager.delegate = self;
+    [self.dataAccessManager findDeparturesForRouteId:self.route.identifier];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    
-    return 0;
+- (void)didFailToFindStopsForRoutesId:(NSError *)error {
+    [self alertFailFetchingMessage:[error localizedDescription]];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    
-    return nil;
-}
-
-- (void)configureHeaderCell:(UITableViewCell *)cell title:(NSString *)title {
-    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:24];
-    cell.textLabel.text = title;
-    cell.detailTextLabel.text = @"";
-    cell.imageView.image = nil;
-}
-
-- (void)configureStreeCell:(UITableViewCell *)cell forStreet:(NSDictionary *)street {
-    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
-    cell.textLabel.text =  street[@"name"];
-    cell.detailTextLabel.text = @"";
-    cell.imageView.image = nil;
-}
-
-- (void)configureDeparturesCell:(UITableViewCell *)cell forDeparture:(NSDictionary *)departure {
-    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
-    cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16];
-    cell.detailTextLabel.text = @"";
-    cell.textLabel.text = departure[@"time"];
-}
-
-//- (NSString *) sectionTypeForSection:(NSInteger)section {
-//    NSString *resultString;
-//    switch (section) {
-//        case 0: {
-//            resultString = @"Street";
-//            break;
-//        }
-//        case 1: {
-//            if([self.weekdayDepartures count] > 0)
-//            {
-//                resultString = @"Weekday";
-//                break;
-//                
-//            }else if([self.saturdayDepartures count] > 0) {
-//                resultString = @"Saturday";
-//                break;
-//                
-//            }else if([self.sundayDepartures count] > 0) {
-//                resultString = @"Sunday";
-//                break;
-//                
-//            }else {
-//                resultString = @"None";
-//                break;
-//            }
-//        }
-//            
-//        case 2: {
-//            if([self.saturdayDepartures count] > 0) {
-//                resultString = @"Saturday";
-//                break;
-//                
-//            }else if([self.sundayDepartures count] > 0) {
-//                resultString = @"Sunday";
-//                break;
-//                
-//            }else {
-//                resultString = @"None";
-//                break;
-//            }
-//        }
-//            
-//        case 3: {
-//            if([self.sundayDepartures count] > 0) {
-//                resultString = @"Sunday";
-//                break;
-//                
-//            }else {
-//                resultString = @"None";
-//                break;
-//            }
-//        }
-//        default: {
-//            resultString = @"None";
-//            break;
-//        }
-//    }
-//    return resultString;
-//}
-
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)didFindDepartures:(NSArray *)departures ByRouteId:(int)routeId {
+    NSLog(@"%@", departures);
     
 }
+
+- (void)didFailToFindDeparturesForRouteId:(NSError *)error {
+    [self alertFailFetchingMessage:[error localizedDescription]];
+}
+
+
+
+
 
 @end

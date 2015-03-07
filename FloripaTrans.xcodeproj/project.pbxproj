@@ -23,6 +23,7 @@
 		A59EAA6A1AAA976600460561 /* FTRouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA691AAA976600460561 /* FTRouteDetailViewController.m */; };
 		A59EAA6D1AAB3F3F00460561 /* FTStop.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA6C1AAB3F3F00460561 /* FTStop.m */; };
 		A59EAA701AAB3F4F00460561 /* FTDeparture.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA6F1AAB3F4F00460561 /* FTDeparture.m */; };
+		A59EAA731AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA721AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		A59EAA6C1AAB3F3F00460561 /* FTStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTStop.m; sourceTree = "<group>"; };
 		A59EAA6E1AAB3F4F00460561 /* FTDeparture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTDeparture.h; sourceTree = "<group>"; };
 		A59EAA6F1AAB3F4F00460561 /* FTDeparture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTDeparture.m; sourceTree = "<group>"; };
+		A59EAA711AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouteDetailTableViewDelegateHandler.h; sourceTree = "<group>"; };
+		A59EAA721AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouteDetailTableViewDelegateHandler.m; sourceTree = "<group>"; };
 		D4ADF84DAC1C0CDC62985E90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5782A5EC3984BF5E1B143B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,8 +198,9 @@
 		A59EAA531AAA7A3D00460561 /* RouteDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A59EAA681AAA976600460561 /* FTRouteDetailViewController.h */,
-				A59EAA691AAA976600460561 /* FTRouteDetailViewController.m */,
+				A59EAA741AAB4C7200460561 /* ViewController */,
+				A59EAA711AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.h */,
+				A59EAA721AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.m */,
 			);
 			name = RouteDetail;
 			sourceTree = "<group>";
@@ -220,6 +224,15 @@
 				A59EAA661AAA960800460561 /* floripa.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		A59EAA741AAB4C7200460561 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A59EAA681AAA976600460561 /* FTRouteDetailViewController.h */,
+				A59EAA691AAA976600460561 /* FTRouteDetailViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		C366CF1B97705B2D728A0708 /* Pods */ = {
@@ -368,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59EAA701AAB3F4F00460561 /* FTDeparture.m in Sources */,
+				A59EAA731AAB4C6D00460561 /* FTRouteDetailTableViewDelegateHandler.m in Sources */,
 				A59EAA5B1AAA817E00460561 /* FTRoutesListViewController.m in Sources */,
 				A59EAA301AAA756000460561 /* AppDelegate.m in Sources */,
 				A59EAA2D1AAA756000460561 /* main.m in Sources */,
