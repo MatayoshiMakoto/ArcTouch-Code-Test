@@ -7,7 +7,12 @@
 //
 
 #import "FTTextfieldKeyboardDismisserViewController.h"
+@protocol FTFindRoutesGoogleMapsViewControllerDelegate <NSObject>
+@required
+- (void)streetNameSelected:(NSString *)street;
+@end
 
 @interface FTFindRoutesGoogleMapsViewController : FTTextfieldKeyboardDismisserViewController
 
+@property (nonatomic, weak) id <FTFindRoutesGoogleMapsViewControllerDelegate> delegate;
 @end

@@ -176,4 +176,8 @@
     }];
 }
 
+- (void)cancelAllFetchingRequest {
+    [self.operationQueue cancelAllOperations];
+}
+
 @end

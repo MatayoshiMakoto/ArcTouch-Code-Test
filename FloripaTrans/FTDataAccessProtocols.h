@@ -33,8 +33,14 @@
 - (void)findDeparturesForRouteId:(int)routeId;
 
 /**
- *  instace which will receive the DataAccessDelegate delegate methods.
+ *  Method that will cancel the request if needed.
  */
+- (void)cancelAllFetchingRequest;
+
+/**
+ *  Instamce which will receive the DataAccessDelegate delegate methods.
+ */
+
 @property (nonatomic, weak) id <FTDataAccessDelegate> delegate;
 
 @end

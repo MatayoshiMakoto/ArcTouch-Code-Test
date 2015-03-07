@@ -10,4 +10,5 @@
 @interface FTTextfieldKeyboardDismisserViewController : UIViewController
 - (void)dismissKeyboard;
 - (void)alertFailFetchingMessage:(NSString *)message;
+- (void)alertMessage:(NSString *)message withTilte:(NSString *)title;
 @end

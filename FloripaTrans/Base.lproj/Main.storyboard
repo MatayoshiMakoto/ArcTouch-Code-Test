@@ -24,24 +24,27 @@
                                     <constraint firstAttribute="width" constant="125" id="LEB-VL-R7a"/>
                                     <constraint firstAttribute="height" constant="31" id="PXF-JS-9Mb"/>
                                 </constraints>
-                                <state key="normal" title="Select Route">
+                                <state key="normal" title="Ok">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="okTouchUp:" destination="o9K-hd-2J8" eventType="touchUpInside" id="gRQ-WR-n3X"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7Q-8S-qwk" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="477"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lon-bs-OJu" firstAttribute="top" secondItem="b7Q-8S-qwk" secondAttribute="bottom" constant="8" id="2QQ-4i-Qbu"/>
-                            <constraint firstItem="b7Q-8S-qwk" firstAttribute="top" secondItem="mQZ-Zk-4cx" secondAttribute="bottom" id="dfS-0j-f4l"/>
-                            <constraint firstItem="b7Q-8S-qwk" firstAttribute="leading" secondItem="Pme-j8-XCB" secondAttribute="leadingMargin" constant="-16" id="iWM-vZ-KEm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b7Q-8S-qwk" secondAttribute="trailing" constant="-16" id="2ab-GB-S8L"/>
+                            <constraint firstItem="b7Q-8S-qwk" firstAttribute="leading" secondItem="Pme-j8-XCB" secondAttribute="leadingMargin" constant="-16" id="Aqz-EC-xIA"/>
                             <constraint firstAttribute="centerX" secondItem="lon-bs-OJu" secondAttribute="centerX" id="kVA-5f-4Gm"/>
+                            <constraint firstItem="lon-bs-OJu" firstAttribute="top" secondItem="b7Q-8S-qwk" secondAttribute="bottom" constant="8" id="l3B-1V-adt"/>
+                            <constraint firstItem="b7Q-8S-qwk" firstAttribute="top" secondItem="mQZ-Zk-4cx" secondAttribute="bottom" constant="8" id="nvS-KO-zHA"/>
                             <constraint firstItem="gix-I8-3jZ" firstAttribute="top" secondItem="lon-bs-OJu" secondAttribute="bottom" constant="20" id="uAt-oT-Hzy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b7Q-8S-qwk" secondAttribute="trailing" constant="-16" id="zLz-89-9JK"/>
                         </constraints>
                     </view>
                     <connections>

@@ -27,7 +27,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    NSLog(@"%@", self.route);
+    
+    self.navigationItem.title = @"Route Detail";
     
     // Set up how the UI state of the UI elements
     [self.titleBackground roundViewCornerWithRadius:25];
@@ -52,7 +53,11 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+}
+
 - (void)goBack {
+    [self.dataAccessManager cancelAllFetchingRequest];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

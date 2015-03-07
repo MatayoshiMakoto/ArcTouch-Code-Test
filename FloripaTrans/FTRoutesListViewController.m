@@ -12,8 +12,9 @@
 #import "UIView+FTViewLayout.h"
 #import "FTRoute.h"
 #import "FTRouteDetailViewController.h"
+#import "FTFindRoutesGoogleMapsViewController.h"
 
-@interface FTRoutesListViewController() <UITableViewDelegate, UITableViewDataSource, FTDataAccessDelegate>
+@interface FTRoutesListViewController() <UITableViewDelegate, UITableViewDataSource, FTDataAccessDelegate, FTFindRoutesGoogleMapsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton    *searchButton;
@@ -29,8 +30,13 @@
 @implementation FTRoutesListViewController
 
 - (void)viewDidLoad {
+    // Set up view title
+    self.navigationItem.title = @"Routes";
+    
+    // Round the corner of the search button
     [self.searchButton roundViewCornerWithRadius:10];
     
+    // Set up the data access manager
     self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
     self.dataAccessManager.delegate = self;
     [self.dataAccessManager findRoutesForStopName:@"Deputado Antônio Edu Vieira"];
@@ -39,6 +45,10 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(goToMap)];
     self.navigationItem.rightBarButtonItem = item;
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.dataAccessManager cancelAllFetchingRequest];
 }
 
 - (void) goToMap {
@@ -63,12 +73,19 @@
     [self dismissKeyboard];
 }
 
+#pragma mark - FtFindRoutesGoogleMapsViewController delegate methods
+
+- (void)streetNameSelected:(NSString *)street {
+    self.dataAccessManager.delegate = self;
+    [self.dataAccessManager findRoutesForStopName:street];
+    self.searchTextField.text = street;
+}
+
 #pragma mark - DataAccessDelegate delegate methods
 
 - (void)didFindRoutes:(NSArray *)routes forStopName:(NSString *)stopName {
     
     self.routes = routes;
-    NSLog(@"%@", self.routes);
     [self.routesTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
@@ -124,8 +141,11 @@
     if ([[segue identifier] isEqualToString:@"PushToRouteDetail"]) {
         FTRouteDetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.route = self.selectedRoute;
-        
-        
+    } else if([[segue identifier] isEqualToString:@"PushToMap"]) {
+        FTFindRoutesGoogleMapsViewController *mapViewController = [segue destinationViewController];
+        mapViewController.delegate = self;
     }
 }
+
+
 @end
