@@ -15,6 +15,7 @@
 		A59EAA381AAA756000460561 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA371AAA756000460561 /* Images.xcassets */; };
 		A59EAA3B1AAA756000460561 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA391AAA756000460561 /* LaunchScreen.xib */; };
 		A59EAA471AAA756000460561 /* FloripaTransTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA461AAA756000460561 /* FloripaTransTests.m */; };
+		A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		A59EAA451AAA756000460561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59EAA461AAA756000460561 /* FloripaTransTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloripaTransTests.m; sourceTree = "<group>"; };
 		A59EAA551AAA7ACA00460561 /* FTDataAccessProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTDataAccessProtocols.h; sourceTree = "<group>"; };
+		A59EAA561AAA7D2700460561 /* FTJSONHTTPDataAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTJSONHTTPDataAccessManager.h; sourceTree = "<group>"; };
+		A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTJSONHTTPDataAccessManager.m; sourceTree = "<group>"; };
 		D4ADF84DAC1C0CDC62985E90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5782A5EC3984BF5E1B143B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				A59EAA551AAA7ACA00460561 /* FTDataAccessProtocols.h */,
+				A59EAA561AAA7D2700460561 /* FTJSONHTTPDataAccessManager.h */,
+				A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */,
 			);
 			name = DataAccess;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				A59EAA331AAA756000460561 /* ViewController.m in Sources */,
 				A59EAA301AAA756000460561 /* AppDelegate.m in Sources */,
 				A59EAA2D1AAA756000460561 /* main.m in Sources */,
+				A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
