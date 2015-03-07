@@ -10,12 +10,13 @@
 		3FC502B73A761F39D9846A65 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5782A5EC3984BF5E1B143B7 /* libPods.a */; };
 		A59EAA2D1AAA756000460561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA2C1AAA756000460561 /* main.m */; };
 		A59EAA301AAA756000460561 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA2F1AAA756000460561 /* AppDelegate.m */; };
-		A59EAA331AAA756000460561 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA321AAA756000460561 /* ViewController.m */; };
 		A59EAA361AAA756000460561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA341AAA756000460561 /* Main.storyboard */; };
 		A59EAA381AAA756000460561 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA371AAA756000460561 /* Images.xcassets */; };
 		A59EAA3B1AAA756000460561 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59EAA391AAA756000460561 /* LaunchScreen.xib */; };
 		A59EAA471AAA756000460561 /* FloripaTransTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA461AAA756000460561 /* FloripaTransTests.m */; };
 		A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */; };
+		A59EAA5B1AAA817E00460561 /* FTRoutesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5A1AAA817E00460561 /* FTRoutesListViewController.m */; };
+		A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,6 @@
 		A59EAA2C1AAA756000460561 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A59EAA2E1AAA756000460561 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A59EAA2F1AAA756000460561 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A59EAA311AAA756000460561 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A59EAA321AAA756000460561 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A59EAA351AAA756000460561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A59EAA371AAA756000460561 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A59EAA3A1AAA756000460561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +45,10 @@
 		A59EAA551AAA7ACA00460561 /* FTDataAccessProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTDataAccessProtocols.h; sourceTree = "<group>"; };
 		A59EAA561AAA7D2700460561 /* FTJSONHTTPDataAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTJSONHTTPDataAccessManager.h; sourceTree = "<group>"; };
 		A59EAA571AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTJSONHTTPDataAccessManager.m; sourceTree = "<group>"; };
+		A59EAA591AAA817E00460561 /* FTRoutesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRoutesListViewController.h; sourceTree = "<group>"; };
+		A59EAA5A1AAA817E00460561 /* FTRoutesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRoutesListViewController.m; sourceTree = "<group>"; };
+		A59EAA5C1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTextfieldKeyboardDismisserViewController.h; sourceTree = "<group>"; };
+		A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTextfieldKeyboardDismisserViewController.m; sourceTree = "<group>"; };
 		D4ADF84DAC1C0CDC62985E90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5782A5EC3984BF5E1B143B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,8 +110,6 @@
 				A59EAA501AAA7A0900460561 /* Utilities */,
 				A59EAA2E1AAA756000460561 /* AppDelegate.h */,
 				A59EAA2F1AAA756000460561 /* AppDelegate.m */,
-				A59EAA311AAA756000460561 /* ViewController.h */,
-				A59EAA321AAA756000460561 /* ViewController.m */,
 				A59EAA341AAA756000460561 /* Main.storyboard */,
 				A59EAA371AAA756000460561 /* Images.xcassets */,
 				A59EAA391AAA756000460561 /* LaunchScreen.xib */,
@@ -146,6 +147,8 @@
 		A59EAA501AAA7A0900460561 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A59EAA5C1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.h */,
+				A59EAA5D1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -163,6 +166,8 @@
 		A59EAA521AAA7A2C00460561 /* RoutesList */ = {
 			isa = PBXGroup;
 			children = (
+				A59EAA591AAA817E00460561 /* FTRoutesListViewController.h */,
+				A59EAA5A1AAA817E00460561 /* FTRoutesListViewController.m */,
 			);
 			name = RoutesList;
 			sourceTree = "<group>";
@@ -325,10 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59EAA331AAA756000460561 /* ViewController.m in Sources */,
+				A59EAA5B1AAA817E00460561 /* FTRoutesListViewController.m in Sources */,
 				A59EAA301AAA756000460561 /* AppDelegate.m in Sources */,
 				A59EAA2D1AAA756000460561 /* main.m in Sources */,
 				A59EAA581AAA7D2700460561 /* FTJSONHTTPDataAccessManager.m in Sources */,
+				A59EAA5E1AAA833A00460561 /* FTTextfieldKeyboardDismisserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
