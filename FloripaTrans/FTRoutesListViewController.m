@@ -34,6 +34,15 @@
     self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
     self.dataAccessManager.delegate = self;
     [self.dataAccessManager findRoutesForStopName:@"Deputado Antônio Edu Vieira"];
+    
+    // Add a map button
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(goToMap)];
+    self.navigationItem.rightBarButtonItem = item;
+    
+}
+
+- (void) goToMap {
+    [self performSegueWithIdentifier:@"PushToMap" sender:self];
 }
 
 - (IBAction)searchTouchUp:(id)sender {
