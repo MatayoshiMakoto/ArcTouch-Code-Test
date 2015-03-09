@@ -9,11 +9,13 @@
 #import "FTFindRoutesGoogleMapsViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <CoreLocation/CoreLocation.h>
+#import "UIView+FTViewLayout.h"
 
 @interface  FTFindRoutesGoogleMapsViewController() <GMSMapViewDelegate>
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) GMSMarker *routeMarker;
 
+@property (weak, nonatomic) IBOutlet UIButton *okButton;
 
 @end
 @implementation FTFindRoutesGoogleMapsViewController
@@ -30,6 +32,9 @@
     self.mapView.settings.myLocationButton = NO;
     
     self.mapView.delegate = self;
+    
+    // Round the corner of the search button
+    [self.okButton roundViewCornerWithRadius:10];
     
     // Set up initial location for the map view
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-27.593500

@@ -49,6 +49,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="b7Q-8S-qwk" id="BGh-3r-tRr"/>
+                        <outlet property="okButton" destination="lon-bs-OJu" id="BtY-L5-dDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhi-8u-gNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
