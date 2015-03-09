@@ -45,6 +45,15 @@
     // Instantiate the route marker
     self.routeMarker = [[GMSMarker alloc] init];
     
+    // Change the back button so it has the title Back
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = item;
+    
+}
+
+- (void)goBack {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)okTouchUp:(id)sender {
