@@ -80,7 +80,8 @@
  *
  *  @return string with all properties current values.
  */
+#define kDescriptionStringFormat @"\r{\rcalendar = %ld\rid = %d\rtime = %@\r}"
 - (NSString *)description {
-    return [NSString stringWithFormat:@"\r{\rcalendar = %ld\rid = %d\rtime = %@\r}", self.calendar, self.identifier, self.time];
+    return [NSString stringWithFormat:kDescriptionStringFormat, self.calendar, self.identifier, self.time];
 }
 @end

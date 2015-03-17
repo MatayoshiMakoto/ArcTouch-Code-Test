@@ -65,7 +65,8 @@
  *
  *  @return string with all properties current values.
  */
+#define kDescriptionStringFormat @"\r{\rid = %d\rname = %@\routeId = %d\rsequence = %d\r}"
 - (NSString *)description {
-    return [NSString stringWithFormat:@"\r{\rid = %d\rname = %@\routeId = %d\rsequence = %d\r}", self.identifier, self.name, self.routeId, self.sequence];
+    return [NSString stringWithFormat:kDescriptionStringFormat, self.identifier, self.name, self.routeId, self.sequence];
 }
 @end

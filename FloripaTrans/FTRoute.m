@@ -73,7 +73,8 @@
  *
  *  @return string with all properties current values.
  */
+#define kDescriptionStringFormat @"\r{\ragencyId = %d\rid = %d\rlastModifiedDate = %@\rlongName = %@\rshortName = %d\r}"
 - (NSString *)description {
-    return [NSString stringWithFormat:@"\r{\ragencyId = %d\rid = %d\rlastModifiedDate = %@\rlongName = %@\rshortName = %d\r}", self.agencyId, self.identifier, self.lastModifiedDate, self.longName, self.shortName];
+    return [NSString stringWithFormat:kDescriptionStringFormat, self.agencyId, self.identifier, self.lastModifiedDate, self.longName, self.shortName];
 }
 @end
