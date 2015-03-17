@@ -62,13 +62,16 @@
  *
  *  @return returns a Calendar enum
  */
+#define kWeekDay  @"WEEKDAY"
+#define kSaturday @"SATURDAY"
+#define kSunday   @"SUNDAY"
 - (Calendar) stringToCalendar:(NSString *)calendarString {
     
-    if([calendarString isEqualToString:@"WEEKDAY"]) {
+    if([calendarString isEqualToString:kWeekDay]) {
         return WEEKDAY;
-    } else if([calendarString isEqualToString:@"SATURDAY"]) {
+    } else if([calendarString isEqualToString:kSaturday]) {
         return SATURDAY;
-    } else if([calendarString isEqualToString:@"SUNDAY"]) {
+    } else if([calendarString isEqualToString:kSunday]) {
         return SUNDAY;
     }
     
