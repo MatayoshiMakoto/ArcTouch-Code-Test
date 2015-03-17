@@ -59,12 +59,24 @@
     self.sundayDepartures   = [NSMutableArray array];
     
     for(FTDeparture *d in departures) {
-        if(d.calendar == WEEKDAY){
-            [self.weekdayDepartures addObject:d];
-        } else if(d.calendar == SATURDAY) {
-            [self.saturdayDepartures addObject:d];
-        } else if(d.calendar == SUNDAY) {
-            [self.sundayDepartures addObject:d];
+        switch (d.calendar) {
+            case WEEKDAY: {
+               [self.weekdayDepartures addObject:d];
+                break;
+            }
+                
+            case SATURDAY: {
+                [self.saturdayDepartures addObject:d];
+                break;
+            }
+                
+            case SUNDAY: {
+                [self.sundayDepartures addObject:d];
+                break;
+            }
+                
+            default:
+                break;
         }
     }
     
@@ -109,15 +121,22 @@
     
     Calendar sectionType = [self sectionTypeForSection:section];
     
-    if(sectionType == WEEKDAY) {
-        return [self.weekdayDepartures count] + 1;
-    } else if(sectionType == SATURDAY) {
-        return [self.saturdayDepartures count] + 1;
-    } else if(sectionType == SUNDAY) {
-        return [self.sundayDepartures count] + 1;
+    switch (sectionType) {
+        case WEEKDAY: {
+            return [self.weekdayDepartures count] + 1;
+        }
+            
+        case SATURDAY: {
+            return [self.saturdayDepartures count] + 1;
+        }
+            
+        case SUNDAY: {
+            return [self.sundayDepartures count] + 1;
+        }
+            
+        default:
+             return 0;
     }
-    
-    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -143,24 +162,37 @@
         } else{
             [self configureStreeCell:cell forStreet:self.streets[indexPath.row - 1]];
         }
-    } else if(sectionType == WEEKDAY) {
-        
-        if (indexPath.row == 0) {
-            [self configureHeaderCell:cell title:@"Weekday"];
-        } else {
-            [self configureDeparturesCell:cell forDeparture:self.weekdayDepartures[indexPath.row -1]];
-        }
-    } else if(sectionType == SATURDAY) {
-        if (indexPath.row == 0) {
-            [self configureHeaderCell:cell title:@"Saturday"];
-        } else {
-            [self configureDeparturesCell:cell forDeparture:self.saturdayDepartures[indexPath.row -1]];
-        }
-    } else if(sectionType == SUNDAY) {
-        if (indexPath.row == 0) {
-            [self configureHeaderCell:cell title:@"Sunday"];
-        } else {
-            [self configureDeparturesCell:cell forDeparture:self.sundayDepartures[indexPath.row -1]];
+    } else {
+        switch (sectionType) {
+            case WEEKDAY: {
+                if (indexPath.row == 0) {
+                    [self configureHeaderCell:cell title:@"Weekday"];
+                } else {
+                    [self configureDeparturesCell:cell forDeparture:self.weekdayDepartures[indexPath.row -1]];
+                }
+                break;
+            }
+                
+            case SATURDAY: {
+                if (indexPath.row == 0) {
+                    [self configureHeaderCell:cell title:@"Saturday"];
+                } else {
+                    [self configureDeparturesCell:cell forDeparture:self.saturdayDepartures[indexPath.row -1]];
+                }
+                break;
+            }
+                
+            case SUNDAY: {
+                if (indexPath.row == 0) {
+                    [self configureHeaderCell:cell title:@"Sunday"];
+                } else {
+                    [self configureDeparturesCell:cell forDeparture:self.sundayDepartures[indexPath.row -1]];
+                }
+                break;
+            }
+                
+            default:
+                break;
         }
     }
     
