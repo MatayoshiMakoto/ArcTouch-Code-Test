@@ -110,7 +110,7 @@
     if (numberOfMatches > 0) {
         NSString *modifiedString = [regex stringByReplacingMatchesInString:string options:0 range:NSMakeRange(0, [string length]) withTemplate:@""];
         
-        if(self.delegate && [self.delegate respondsToSelector:@selector(streetNameSelected:)]) {
+        if(self.delegate) {
             [self.delegate streetNameSelected:modifiedString];
         }
         
