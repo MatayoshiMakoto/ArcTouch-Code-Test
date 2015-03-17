@@ -13,6 +13,9 @@
 #import "UIView+FTViewLayout.h"
 #import "FTRouteDetailTableViewDelegateHandler.h"
 
+NSString * const kDetailViewTitle                 = @"Route Detail";
+NSString * const kDetailNavigationBackButtonTitle = @"Back";
+
 @interface FTRouteDetailViewController() <FTDataAccessDelegate, FTRouteDetailTableViewDelegateHandlerDelegate>
 @property (weak, nonatomic) IBOutlet UIView      *titleBackground;
 @property (weak, nonatomic) IBOutlet UILabel     *titleLabel;
@@ -28,14 +31,14 @@
     
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Route Detail";
+    self.navigationItem.title = kDetailViewTitle;
     
     // Set up how the UI state of the UI elements
     [self.titleBackground roundViewCornerWithRadius:25];
     self.titleLabel.text = self.route.longName;
     
     // Change the back button so it has the title Back
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:kDetailNavigationBackButtonTitle style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = item;
     

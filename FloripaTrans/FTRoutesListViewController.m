@@ -14,6 +14,13 @@
 #import "FTRouteDetailViewController.h"
 #import "FTFindRoutesGoogleMapsViewController.h"
 
+NSString * const kRoutesViewTitle      = @"Routes";
+NSString * const kMapButtonTitle = @"Map";
+
+NSString * const kNoContentAlertMessageTitle = @"No Content";
+NSString * const kNoContentAlertMessage      = @"Type a stop name to search";
+
+
 @interface FTRoutesListViewController() <UITableViewDelegate, UITableViewDataSource, FTDataAccessDelegate, FTFindRoutesGoogleMapsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
@@ -31,7 +38,7 @@
 
 - (void)viewDidLoad {
     // Set up view title
-    self.navigationItem.title = @"Routes";
+    self.navigationItem.title = kRoutesViewTitle;
     
     // Round the corner of the search button
     [self.searchButton roundViewCornerWithRadius:10];
@@ -40,7 +47,7 @@
     self.dataAccessManager = [FTJSONHTTPDataAccessManager sharedManager];
     
     // Add a map button
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(goToMap)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:kMapButtonTitle style:UIBarButtonItemStylePlain target:self action:@selector(goToMap)];
     self.navigationItem.rightBarButtonItem = item;
     
 }
@@ -60,12 +67,7 @@
         self.dataAccessManager.delegate = self;
         [self.dataAccessManager findRoutesForStopName:searchText];
     } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Content"
-                                                            message:@"Type a stop name to search"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
+        [self alertMessage:kNoContentAlertMessage withTitle:kNoContentAlertMessageTitle];
     }
     
     [self dismissKeyboard];

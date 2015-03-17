@@ -5,8 +5,11 @@
 //  Created by Vítor Makoto Matayoshi de Moraes on 3/6/15.
 //  Copyright (c) 2015 Vitor Makoto. All rights reserved.
 //
-
 #import "FTBaseViewController.h"
+
+NSString * const kFetchingDataErrorAlertMessageTitle = @"Fetching Data Error";
+NSString * const kCancelAlertMessageButton = @"Ok";
+
 @interface FTBaseViewController() <UITextFieldDelegate>
 @property (weak, nonatomic) UITextField *focusedTextField;
 @end
@@ -39,10 +42,10 @@
 }
 
 - (void)alertFailFetchingMessage:(NSString *)message{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Fetching Data Error"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:kFetchingDataErrorAlertMessageTitle
                                                         message:message
                                                        delegate:nil
-                                              cancelButtonTitle:@"Ok"
+                                              cancelButtonTitle:kCancelAlertMessageButton
                                               otherButtonTitles:nil];
     [alertView show];
 }
@@ -51,7 +54,7 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:message
                                                        delegate:nil
-                                              cancelButtonTitle:@"Ok"
+                                              cancelButtonTitle:kCancelAlertMessageButton
                                               otherButtonTitles:nil];
     [alertView show];
 }

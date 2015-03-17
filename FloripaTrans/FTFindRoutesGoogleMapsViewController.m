@@ -14,6 +14,16 @@
 CLLocationDegrees const kFlorianopolisLatitude  = -27.593500;
 CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
 
+NSString * const kMapViewTitle                 = @"Map";
+NSString * const kMapNavigationBackButtonTitle = @"Back";
+
+NSString * const kMapAlertMessageTitle            = @"Map Error";
+NSString * const kChooseLocationAlertMessage      = @"Choose a location";
+NSString * const kChooseLocationAlertMessageTitle = @"Location Selection";
+NSString * const kNoStreetAlertMessage            = @"No Street or Avenue Found";
+NSString * const kNoStreetAlertMessageTitle       = @"Could Not Find";
+
+
 @interface  FTFindRoutesGoogleMapsViewController() <GMSMapViewDelegate>
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) GMSMarker *routeMarker;
@@ -26,7 +36,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
 - (void)viewDidLoad {
     
     
-    self.navigationItem.title = @"Map";
+    self.navigationItem.title = kMapViewTitle;
     
     // Set up the map view
     self.mapView.myLocationEnabled = NO;
@@ -49,7 +59,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
     self.routeMarker = [[GMSMarker alloc] init];
     
     // Change the back button so it has the title Back
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:kMapNavigationBackButtonTitle style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = item;
     
@@ -61,7 +71,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
 
 - (IBAction)okTouchUp:(id)sender {
     if(!self.routeMarker.map) {
-        [self alertMessage:@"Choose a location" withTitle:@"Location Selection"];
+        [self alertMessage:kChooseLocationAlertMessage withTitle:kChooseLocationAlertMessageTitle];
         return;
     }
     
@@ -83,7 +93,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
         if(error) {
-            [self alertMessage:[error localizedDescription] withTitle:@"Map Error"];
+            [self alertMessage:[error localizedDescription] withTitle:kMapAlertMessageTitle];
             
             return;
         }
@@ -119,7 +129,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
         
         [self.navigationController popToRootViewControllerAnimated:YES];
     } else  {
-        [self alertMessage:@"No Street or Avenue Found" withTitle:@"Could Not Find"];
+        [self alertMessage:kNoStreetAlertMessage withTitle:kNoStreetAlertMessageTitle];
     }
 }
 
