@@ -11,6 +11,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "UIView+FTViewLayout.h"
 
+CLLocationDegrees const kFlorianopolisLatitude  = -27.593500;
+CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
+
 @interface  FTFindRoutesGoogleMapsViewController() <GMSMapViewDelegate>
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) GMSMarker *routeMarker;
@@ -37,8 +40,8 @@
     [self.okButton roundViewCornerWithRadius:10];
     
     // Set up initial location for the map view
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-27.593500
-                                                            longitude:-48.558540
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:kFlorianopolisLatitude
+                                                            longitude:kFlorianopolisLongitude
                                                                  zoom:14];
     self.mapView.camera = camera;
     
