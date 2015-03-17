@@ -114,7 +114,7 @@ NSString * const kNoStreetAlertMessageTitle       = @"Could Not Find";
 - (void) checkForValidStreet:(NSString *)string{
     
     NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.*Av\\.\\s)|(.*R\\.\\s)" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.*Av\\.\\s)|(.*R\\.\\s|(.*Travessa\\s)|(.*Servidão\\s))" options:NSRegularExpressionCaseInsensitive error:&error];
     
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:string
                                                         options:0
