@@ -61,7 +61,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
 
 - (IBAction)okTouchUp:(id)sender {
     if(!self.routeMarker.map) {
-        [self alertMessage:@"Choose a location" withTilte:@"Location Selection"];
+        [self alertMessage:@"Choose a location" withTitle:@"Location Selection"];
         return;
     }
     
@@ -83,7 +83,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
         if(error) {
-            [self alertMessage:[error localizedDescription] withTilte:@"Map Error"];
+            [self alertMessage:[error localizedDescription] withTitle:@"Map Error"];
             
             return;
         }
@@ -119,7 +119,7 @@ CLLocationDegrees const kFlorianopolisLongitude = -48.558540;
         
         [self.navigationController popToRootViewControllerAnimated:YES];
     } else  {
-        [self alertMessage:@"No Street or Avenue Found" withTilte:@"Could Not Find"];
+        [self alertMessage:@"No Street or Avenue Found" withTitle:@"Could Not Find"];
     }
 }
 

@@ -47,7 +47,7 @@
     [alertView show];
 }
 
-- (void)alertMessage:(NSString *)message withTilte:(NSString *)title {
+- (void)alertMessage:(NSString *)message withTitle:(NSString *)title {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:message
                                                        delegate:nil

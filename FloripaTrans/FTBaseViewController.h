@@ -10,5 +10,5 @@
 @interface FTBaseViewController : UIViewController
 - (void)dismissKeyboard;
 - (void)alertFailFetchingMessage:(NSString *)message;
-- (void)alertMessage:(NSString *)message withTilte:(NSString *)title;
+- (void)alertMessage:(NSString *)message withTitle:(NSString *)title;
 @end
